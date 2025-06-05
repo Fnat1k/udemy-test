@@ -1,0 +1,10 @@
+<h1>Оберіть місто</h1>
+<ul>
+  {{#each cities}}
+    <li>
+      <form action="/weather/{{this}}" method="get" style="display:inline;">
+        <button type="submit">{{this}}</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,9 @@
+<h1>Погода в {{city}}</h1>
+
+{{#if error}}
+  <p style="color: red;">{{error}}</p>
+{{else}}
+  <p>Температура: {{temp}}°C</p>
+  <p>Опис: {{description}}</p>
+  <img src="{{icon}}" alt="Піктограма погоди">
+{{/if}}

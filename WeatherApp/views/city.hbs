@@ -1,0 +1,15 @@
+<div class="weather-box">
+  <h1>Погода в {{city}}</h1>
+
+  {{#if error}}
+    <p class="error">{{error}}</p>
+  {{else}}
+    <p>Температура: {{temp}}°C</p>
+    <p>Опис: {{description}}</p>
+    <p>Вологість: {{humidity}}%</p>
+    <p>Тиск: {{pressure}} гПа</p>
+    <img src="{{icon}}" alt="Піктограма погоди">
+  {{/if}}
+
+  <p><a href="/weather">← Назад до списку міст</a></p>
+</div>
