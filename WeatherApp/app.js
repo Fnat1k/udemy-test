@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const exphbs = require('express-handlebars');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.engine('hbs', exphbs.engine({ extname: '.hbs' }));
 app.set('view engine', 'hbs');
@@ -12,7 +13,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const apiKey = '7bbc75783a72d1cc8b8247f0596c1161';
+const apiKey = process.env.API_KEY;
 const lang = 'ua';
 const units = 'metric';
 
